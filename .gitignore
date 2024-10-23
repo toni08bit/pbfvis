@@ -163,5 +163,5 @@ cython_debug/
 
 # Custom
 *.pbf
-database/*
-!database/README.md
+src/database/*
+!src/database/README.md
