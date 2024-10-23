@@ -1,4 +1,5 @@
 config = {
-    "target": "hamburg-latest.osm.pbf",
-    "database": "./database"
+    "database": "./database",
+    "pbf_input": "hamburg-latest.osm.pbf",
+    "cached_zoom": 14
 }

@@ -40,3 +40,13 @@ def decompress(given_bytes):
         map_bytes = map_bytes[(5 + key_length + value_length):]
 
     return map_dict
+
+def get_object_type_id(object_type):
+    if (object_type == "n"):
+        return b"\x00"
+    elif (object_type == "w"):
+        return b"\x01"
+    elif (object_type == "r"):
+        return b"\x02"
+    else:
+        raise ValueError(f"{object_type} is not a valid object type.")
