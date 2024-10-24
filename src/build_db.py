@@ -3,7 +3,6 @@ import time
 import osmium
 import osmium.osm
 
-import modules.calc_2d as calc_2d
 import modules.map_compressor as map_compressor
 import modules.order_operations as order_operations
 from values import config
@@ -110,6 +109,11 @@ for obj in file_processor:
 
     if ((object_count % (10 ** 5)) == 0):
         print(f"[INFO] Progress: {str(round(object_count / (10 ** 5)))}*10^5 objects.")
+
+order_operations.heap_sort(db_files["relations.index.bin"][1])
+close_db_file("relations.bin")
+close_db_file("relations.index.bin")
+
 
 # Cleanup
 end_time = time.time()
